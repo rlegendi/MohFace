@@ -70,13 +70,13 @@ create_base_gui(appdata_s *ad, int width, int height)
 	evas_object_show(ad->win);
 }
 
+/* Hook to take necessary actions before main event loop starts
+	Initialize UI resources and application's data
+	If this function returns true, the main loop of application starts
+	If this function returns false, the application is terminated */
 static bool
 app_create(int width, int height, void *data)
 {
-	/* Hook to take necessary actions before main event loop starts
-		Initialize UI resources and application's data
-		If this function returns true, the main loop of application starts
-		If this function returns false, the application is terminated */
 	appdata_s *ad = data;
 
 	create_base_gui(ad, width, height);
@@ -84,56 +84,64 @@ app_create(int width, int height, void *data)
 	return true;
 }
 
+/* Handle the launch request. */
 static void
 app_control(app_control_h app_control, void *data)
 {
-	/* Handle the launch request. */
+
 }
 
+/* Take necessary actions when application becomes invisible. */
 static void
 app_pause(void *data)
 {
-	/* Take necessary actions when application becomes invisible. */
+
 }
 
+/* Take necessary actions when application becomes visible. */
 static void
 app_resume(void *data)
 {
-	/* Take necessary actions when application becomes visible. */
+
 }
 
+/* Release all resources. */
 static void
 app_terminate(void *data)
 {
-	/* Release all resources. */
+
 }
 
+/* Called at each second while your app is visible. Update watch UI. */
 static void
 app_time_tick(watch_time_h watch_time, void *data)
 {
-	/* Called at each second while your app is visible. Update watch UI. */
+
 	appdata_s *ad = data;
 	update_watch(ad, watch_time, 0);
 }
 
+
+/* Called at each minute while the device is in ambient mode. Update watch UI. */
 static void
 app_ambient_tick(watch_time_h watch_time, void *data)
 {
-	/* Called at each minute while the device is in ambient mode. Update watch UI. */
 	appdata_s *ad = data;
 	update_watch(ad, watch_time, 1);
 }
 
+/* Update your watch UI to conform to the ambient mode */
 static void
 app_ambient_changed(bool ambient_mode, void *data)
 {
-	/* Update your watch UI to conform to the ambient mode */
+
 }
 
+/*APP_EVENT_LANGUAGE_CHANGED*/
 static void
 watch_app_lang_changed(app_event_info_h event_info, void *user_data)
 {
-	/*APP_EVENT_LANGUAGE_CHANGED*/
+
 	char *locale = NULL;
 	app_event_get_language(event_info, &locale);
 	elm_language_set(locale);
@@ -141,10 +149,11 @@ watch_app_lang_changed(app_event_info_h event_info, void *user_data)
 	return;
 }
 
+/*APP_EVENT_REGION_FORMAT_CHANGED*/
 static void
 watch_app_region_changed(app_event_info_h event_info, void *user_data)
 {
-	/*APP_EVENT_REGION_FORMAT_CHANGED*/
+
 }
 
 int
