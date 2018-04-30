@@ -15,4 +15,7 @@
 #define PACKAGE "com.github.rlegendi.mohface"
 #endif
 
+#define APP_DIR						"/opt/usr/home/owner/apps_rw/com.github.rlegendi.mohface"
+#define ICON_DIR 					APP_DIR"/shared/res"
+
 #endif /* __mohface_H__ */
