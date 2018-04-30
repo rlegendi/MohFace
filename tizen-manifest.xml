@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns="http://tizen.org/ns/packages" package="com.github.rlegendi.mohface" api-version="4.0" version="1.0.0">
-	<profile name="wearable" />
-	<watch-application appid="com.github.rlegendi.mohface" exec="mohface" ambient-support="true">
-		<icon>mohface.png</icon>
-		<label>mohface</label>
-	</watch-application>
-	<privileges>
-		<privilege>http://tizen.org/privilege/alarm.set</privilege>
-	</privileges>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="4.0" package="com.github.rlegendi.mohface" version="1.0.0">
+    <author email="richard.legendi@gmail.com" href="https://github.com/rlegendi">Richard O. Legendi</author>
+    <description>Sample learning project for my Gear S2</description>
+    <profile name="wearable"/>
+    <watch-application ambient-support="true" appid="com.github.rlegendi.mohface" exec="mohface">
+        <label>mohface</label>
+        <icon>mohface.png</icon>
+    </watch-application>
+    <privileges>
+        <privilege>http://tizen.org/privilege/alarm.set</privilege>
+    </privileges>
+    <feature name="http://tizen.org/feature/screen.size.normal.360.360">true</feature>
 </manifest>
