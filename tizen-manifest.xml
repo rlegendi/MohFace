@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="com.github.rlegendi.mohface" api-version="4.0" version="1.0.0">
+	<profile name="wearable" />
+	<watch-application appid="com.github.rlegendi.mohface" exec="mohface" ambient-support="true">
+		<icon>mohface.png</icon>
+		<label>mohface</label>
+	</watch-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/alarm.set</privilege>
+	</privileges>
+</manifest>
