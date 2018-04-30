@@ -3,6 +3,11 @@ MohFace
 
 This is just a random app to create a new app for my gadget.
 
+It looks like this:
+
+![Screenshot](doc/pic/02_something_already.png)
+
+
 References
 ----------
 
